@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Portfolio</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #f4f4f9;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 30px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+header nav ul li a:hover {
+    color: #ffdc3c;
+}
+
+header nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffdc3c;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+.section {
+    padding: 80px 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.project-card {
+    background-color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    font-size: 1.9rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+button, .btn-submit {
+    background: #00c6ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover, .btn-submit:hover {
+    background: #0072ff;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+ul li a {
+    font-size: 1.2rem;
+    color: #00c6ff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+ul li a:hover {
+    transform: translateY(-5px);
+    color: #ffdc3c;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #222;
+    color: #f4f4f9;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #00c6ff;
+    outline: none;
+}
+
+form button {
+    max-width: 200px;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+    color: #bbb;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+</stlye>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mathematics Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="section slide-in">
+        <div class="container">
+            <h2>Welcome to My Mathematics Portfolio</h2>
+            <p>Explore my work, projects, and resources related to the fascinating world of mathematics.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section slide-in">
+        <div class="container">
+            <h2>About Mathematics</h2>
+            <p>Mathematics is a universal language that helps us understand and interpret the world. It spans a variety of topics such as algebra, geometry, calculus, statistics, and more. In this portfolio, you'll find my work and projects that showcase my passion for this fascinating subject.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section slide-in">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Project 1: Advanced Calculus</h3>
+                <p>A deep dive into multivariable calculus, focusing on integrals and differential equations.</p>
+                <button class="btn-hover">View Project</button>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: Algebraic Structures</h3>
+                <p>An exploration of groups, rings, and fields in abstract algebra.</p>
+                <button class="btn-hover">View Project</button>
+            </div>
+            <div class="project-card">
+                <h3>Project 3: Data Science in Mathematics</h3>
+                <p>How statistical analysis and machine learning intersect with pure mathematics.</p>
+                <button class="btn-hover">View Project</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="section slide-in">
+        <div class="container">
+            <h2>Mathematical Resources</h2>
+            <ul>
+                <li><a href="https://www.khanacademy.org/math" class="resource-hover">Khan Academy</a></li>
+                <li><a href="https://www.wolframalpha.com/" class="resource-hover">Wolfram Alpha</a></li>
+                <li><a href="https://www.desmos.com/calculator" class="resource-hover">Desmos Graphing Calculator</a></li>
+                <li><a href="https://math.stackexchange.com/" class="resource-hover">Math StackExchange</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section slide-in">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to discuss mathematics or collaborate on projects, feel free to reach out!</p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mathematics Portfolio</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    
+    if (name && email && message) {
+        alert("Thank you for reaching out! We will get back to you soon.");
+        document.getElementById("contact-form").reset();
+    } else {
+        alert("Please fill out all fields.");
+    }
+});
+
+    </script>
+</body>
+</html>
